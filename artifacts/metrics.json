@@ -1,0 +1,38 @@
+{
+  "dataset": "Procedural synthetic surfaces; independent seeds, same generator distribution",
+  "train_count": 900,
+  "validation_count": 300,
+  "test_count": 300,
+  "test_accuracy": 1.0,
+  "validation_accuracy": 1.0,
+  "confusion_matrix": [
+    [
+      100,
+      0,
+      0
+    ],
+    [
+      0,
+      100,
+      0
+    ],
+    [
+      0,
+      0,
+      100
+    ]
+  ],
+  "labels": [
+    "clean",
+    "scratch",
+    "spot"
+  ],
+  "seconds": 49.63,
+  "architecture": "3x3 Conv(12) -> ReLU -> mean + max pooling -> Dense(3) -> Softmax",
+  "limitations": [
+    "No real-image validation",
+    "Softmax scores are uncalibrated",
+    "Same-generator evaluation may overestimate generalization",
+    "Activation map is not a causal explanation"
+  ]
+}
